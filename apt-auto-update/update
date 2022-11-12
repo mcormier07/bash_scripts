@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo apt update && sudo apt install -y $(apt list --upgradable | cut -d '/' -f 1 | cut -d 'E' -f 1 | sed '/^$/d')
