@@ -1,0 +1,11 @@
+[Unit]
+Description=Auto-Mount OneDrive storage
+
+[Service]
+User=your_user
+ExecStart=/usr/bin/rclone --vfs-cache-mode full mount "mount_name": /path/to/mount
+Restart=on-failure
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target
